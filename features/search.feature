@@ -8,3 +8,4 @@ Feature: Search
     And I click the search magnifying button
     Then I am redirected on the search results page
     And There are some results displayed
+

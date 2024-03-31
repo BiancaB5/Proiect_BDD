@@ -11,3 +11,6 @@ Feature: Whats New Page
 #    When I click the Shop New Yoga button
 #    Then I am redirected on the New Luma Yoga Collection page
 #    And I should see "New Luma Yoga Collection" Message
+
+
+

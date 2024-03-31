@@ -10,7 +10,7 @@ class BasePage(Browser):
     INPUT_SEARCH = (By.ID, "search")
     BUTTON_SEARCH = (By.CSS_SELECTOR, ".action.search")
     CART_QUANTITY = (By.CLASS_NAME, "counter-number")
-    # WISH_LIST_QUANTITY = (By.CLASS_NAME, "counter")
+    # WISH_LIST_QUANTITY = (By.CLASS_NAME, "toolbar-number")
 
     # functii ajutatoare
     def find(self, locator):
@@ -34,3 +34,7 @@ class BasePage(Browser):
     def verify_cart_quantity(self, expected):
         time.sleep(3)
         assert f'{expected}' in self.find(self.CART_QUANTITY).text
+
+    # def verify_wish_list_quantity(self, number):
+    #     time.sleep(3)
+    #     assert f'{number}' in self.find(self.WISH_LIST_QUANTITY).text

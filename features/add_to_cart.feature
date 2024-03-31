@@ -10,3 +10,5 @@ Feature: Add to cart
     And I click color button
     And I click Add to cart button
     Then Cart has "1" item in it
+
+

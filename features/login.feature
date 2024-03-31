@@ -3,7 +3,7 @@ Feature: Login Page
   Background: Open login page
     Given I am on the login page
 
-  @smoke @regression
+  @login @regression
   Scenario: Check that the URL is correct
     Then The URL of the page is "https://magento.softwaretestingboard.com/customer/account/login"
 
@@ -18,4 +18,7 @@ Feature: Login Page
       | python9@gmail.com    | 12345678       |
       | bianca@yahoo.com     | 6scaasc        |
       | bianca@gmail.com     | asdxzxzzzxvb   |
-      | biancaana@gmail.com  | asdxz12vb      |
+#      | biancaana@gmail.com  | asdxz12vb      |
+
+
+

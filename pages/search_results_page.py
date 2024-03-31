@@ -1,7 +1,5 @@
 from selenium.webdriver.common.by import By
-
 from pages.base_page import BasePage
-
 
 class SearchResultsPage(BasePage):
 
@@ -16,12 +14,10 @@ class SearchResultsPage(BasePage):
     def verify_search_results_displayed(self):
         results = self.find_all(self.PRODUCT_TITLE)
         assert len(results) > 0
-
     def click_size(self):
         self.find(self.BUTTON_SIZE).click()
-
     def click_color(self):
         self.find(self.BUTTON_COLOR).click()
-
     def click_add_to_cart(self):
         self.find(self.BUTTON_ADD_TO_CART).click()
+
