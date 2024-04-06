@@ -6,19 +6,19 @@ from pages.base_page import BasePage
 class LoginPage(BasePage):
 
 #definim locatorii cu litere mari pentru ca sunt constante, nu isi schimba niciodata valoarea
-    LOGIN_PAGE_URL = "https://magento.softwaretestingboard.com/customer/account/login"
+
     INPUT_EMAIL = (By.ID, "email")
     INPUT_PASSWORD = (By.ID, "pass")
     BUTTON_SIGNIN = (By.ID, "send2")
     DIV_ERROR_MESSAGE = (By.CLASS_NAME, "message-error")
 
-    def open(self):
-        self.driver.get(self.LOGIN_PAGE_URL)
+    def open(self, url):
+        self.driver.get(url)
 
 
 #verifica url-ul paginii
-    def verify_url(self):
-        assert self.driver.current_url == self.LOGIN_PAGE_URL
+    def verify_url(self, url):
+        assert self.driver.current_url == url
 
 
 #metoda care scrie pe inputul de email

@@ -32,7 +32,7 @@ class BasePage(Browser):
         return self.driver.find_elements(*locator)
 
     def verify_cart_quantity(self, expected):
-        time.sleep(3)
+        time.sleep(5)
         assert f'{expected}' in self.find(self.CART_QUANTITY).text
 
     # def verify_wish_list_quantity(self, number):

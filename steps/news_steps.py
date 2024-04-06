@@ -1,10 +1,10 @@
 from behave import *
 
-@given("I am on the Whats New page")
-def step_impl(context):
-    context.new_page.open()
+@given('I am on the Whats New page "{url}"')
+def step_impl(context, url):
+    context.new_page.open(url)
 
 
-@then('The URL of the page is "https://magento.softwaretestingboard.com/what-is-new.html"')
-def step_impl(context):
-    context.new_page.verify_url()
+@then('The new URL of the page is "{url}"')
+def step_impl(context, url):
+    context.new_page.verify_url(url)

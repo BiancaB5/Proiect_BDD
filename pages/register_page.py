@@ -61,7 +61,7 @@ class RegisterPage(BasePage):
 
 
     def verify_first_name_error_displayed(self):
-        assert self.find(self.ERROR_FIRST_NAME).is_displayed(), "fisrt nmame not found"
+        assert self.find(self.ERROR_FIRST_NAME).is_displayed(), "first name not found"
 
     def verify_last_name_error_displayed(self):
         assert self.find(self.ERROR_LAST_NAME).is_displayed(), "last name not found"

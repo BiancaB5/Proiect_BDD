@@ -13,7 +13,7 @@ Feature: Registration page
     And Password error is displayed
     And Confirm Password error is displayed
 
-  @validdata
+  @main
   Scenario: Register new account with valid data
     When I enter "Ana" in the first name input
     When I enter "Cosanzeana" in the last name input
