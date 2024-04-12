@@ -4,6 +4,10 @@ from behave import *
 def step_impl(context, url):
     context.login_page.open(url)
 
+@when("I click Consent button to use of my date")
+def step_impl(context):
+    context.login_page.click_consent_button()
+
 
 @then('The login URL of the page is "{url}"')
 def step_impl(context, url):

@@ -5,6 +5,7 @@ Feature: Login Page
 
   @login @regression
   Scenario: Check that the URL is correct
+    When I click Consent button to use of my date
     Then The login URL of the page is "https://magento.softwaretestingboard.com/customer/account/login"
 
   @regression
@@ -15,10 +16,10 @@ Feature: Login Page
     Then I should see "The account sign-in was incorrect or your account is disabled temporarily." message
     Examples:
       | username             | password       |
-      | python9@gmail.com    | 12345678       |
-#      | bianca@yahoo.com     | 6scaasc        |
-#      | bianca@gmail.com     | asdxzxzzzxvb   |
-#      | biancaana@gmail.com  | asdxz12vb      |
+#      | python9@gmail.com    | 12345678       |
+      | bianca@yahoo.com     | 6scaasc        |
+      | bianca@gmail.com     | asdxzxzzzxvb   |
+
 
 
 

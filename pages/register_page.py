@@ -12,7 +12,7 @@ class RegisterPage(BasePage):
     INPUT_PASSWORD = (By.ID, "password")
     INPUT_PASSWORD_CONFIRM = (By.ID, "password-confirmation")
     BUTTON_REGISTER = (By.CSS_SELECTOR, ".action.submit")
-    MESSAGE_SUCCESS = (By.CLASS_NAME, "message-success")
+    MESSAGE_SUCCESS_REGISTER = (By.CLASS_NAME, "message-success")
     REGISTER_PAGE_URL = 'https://magento.softwaretestingboard.com/customer/account/create/'
 
     ERROR_FIRST_NAME = (By.ID, "firstname-error")
@@ -47,14 +47,14 @@ class RegisterPage(BasePage):
         self.type(self.INPUT_PASSWORD_CONFIRM, text)
 
     def click_register_button(self):
-        self.driver.implicitly_wait(3)
+        # self.driver.implicitly_wait(3)
         self.find(self.BUTTON_REGISTER).click()
 
     def verify_success_message_displayed(self):
-        assert self.find(self.MESSAGE_SUCCESS).is_displayed()
+        assert self.find(self.MESSAGE_SUCCESS_REGISTER).is_displayed()
 
     def verify_success_message_contains_text(self, text):
-        assert self.find(self.MESSAGE_SUCCESS).text == text
+        assert self.find(self.MESSAGE_SUCCESS_REGISTER).text == text
 
     def verify_url(self):
         assert self.driver.current_url == self.REGISTER_PAGE_URL
